@@ -123,7 +123,7 @@ def run_init(project_path, task, subject_id, session_id, run_id, site):
         print(f"Marimo notebook saved: {out_notebook}")
 
     # Run the notebook to execute the cells
-    try:
+"""    try:
         print(f"Running notebook: {out_notebook}")
         subprocess.run(
             ["marimo", "run", str(out_notebook)],
@@ -136,6 +136,7 @@ def run_init(project_path, task, subject_id, session_id, run_id, site):
         print(f"Error running notebook: {e.stderr}")
     except FileNotFoundError:
         print("Warning: 'marimo' command not found - install with: pip install marimo")
+        """
     return out_notebook
 
 
